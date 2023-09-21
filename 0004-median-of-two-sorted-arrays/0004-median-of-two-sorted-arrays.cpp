@@ -1,7 +1,7 @@
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& a, vector<int>& b) {
-        for(auto i:b) a.push_back(i);
+        for(auto &i:b) a.push_back(i);
         int n=a.size();
         double ans;
         sort(a.begin(),a.end());
@@ -13,6 +13,5 @@ public:
             ans/=2;
         }
         return ans;
-
     }
 };
