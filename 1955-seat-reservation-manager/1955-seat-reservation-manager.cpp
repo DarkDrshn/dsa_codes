@@ -1,14 +1,12 @@
 class SeatManager {
 public:
     priority_queue <int, vector<int>, greater<int>> gp;
-    set<int> res;
     SeatManager(int n) {
-        while(n--) gp.push(n+1);
+        while(n) gp.push(n--);
     }
     int reserve() {
         int x=gp.top();
         gp.pop();
-        res.insert(x);
         return x;
     }
     
